@@ -13,7 +13,7 @@ A WebRTC meeting service using [mediasoup](https://mediasoup.org).
 
 ## Installation
 * Prerequisites:
-Currently multiparty-meeting will only run on nodejs v10.*
+Currently voice-techbridgers will only run on nodejs v10.*
 To install see here [here](https://github.com/nodesource/distributions/blob/master/README.md#debinstall).
 
 ```bash
@@ -71,7 +71,7 @@ $ npm start
 
 ## Deploy it in a server
 
-* Stop your locally running server. Copy systemd-service file `multiparty-meeting.service` to `/etc/systemd/system/` and check location path settings:
+* Stop your locally running server. Copy systemd-service file `voice-techbridgers.service` to `/etc/systemd/system/` and check location path settings:
 ```bash
 $ cp voice-techbridgers.service /etc/systemd/system/
 $ edit /etc/systemd/system/voice-techbridgers.service
