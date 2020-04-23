@@ -2,9 +2,6 @@
 
 A WebRTC meeting service using [mediasoup](https://mediasoup.org).
 
-![](demo.gif)
-
-Try it online at https://letsmeet.no. You can add /roomname to the URL for specifying a room.
 
 ## Features
 * Audio/Video
@@ -14,14 +11,7 @@ Try it online at https://letsmeet.no. You can add /roomname to the URL for speci
 * Different layouts
 * Internationalization support
 
-## Docker
-If you want the automatic approach, you can find a docker image [here](https://hub.docker.com/r/misi/mm/).
-
-## Ansible 
-If you want the ansible approach, you can find ansible role [here](https://github.com/misi/mm-ansible/).
-[![asciicast](https://asciinema.org/a/311365.svg)](https://asciinema.org/a/311365)
-
-## Manual installation
+## Installation
 * Prerequisites:
 Currently multiparty-meeting will only run on nodejs v10.*
 To install see here [here](https://github.com/nodesource/distributions/blob/master/README.md#debinstall).
@@ -33,8 +23,8 @@ $ sudo apt install npm build-essential redis
 * Clone the project:
 
 ```bash
-$ git clone https://github.com/havfo/multiparty-meeting.git
-$ cd multiparty-meeting
+$ git clone https://github.com/virendrasingh281/voice-techbridgers.git
+$ cd voice-techbridgers
 ```
 
 * Copy `server/config/config.example.js` to `server/config/config.js` :
@@ -83,20 +73,20 @@ $ npm start
 
 * Stop your locally running server. Copy systemd-service file `multiparty-meeting.service` to `/etc/systemd/system/` and check location path settings:
 ```bash
-$ cp multiparty-meeting.service /etc/systemd/system/
-$ edit /etc/systemd/system/multiparty-meeting.service
+$ cp voice-techbridgers.service /etc/systemd/system/
+$ edit /etc/systemd/system/voice-techbridgers.service
 ```
 
 * Reload systemd configuration and start service:
 
 ```bash
 $ systemctl daemon-reload
-$ systemctl start multiparty-meeting
+$ systemctl start voice-techbridgers
 ```
 
-* If you want to start multiparty-meeting at boot time:
+* If you want to start voice-techbridgers at boot time:
 ```bash
-$ systemctl enable multiparty-meeting
+$ systemctl enable voice-techbridgers
 ```
 
 ## Ports and firewall
@@ -114,30 +104,3 @@ To integrate with an LMS (e.g. Moodle), have a look at [LTI](LTI/LTI.md).
 ## TURN configuration
 
 * You need an additional [TURN](https://github.com/coturn/coturn)-server for clients located behind restrictive firewalls! Add your server and credentials to `app/public/config/config.js`
-
-## Community-driven support
-
-* Open mailing list: community@lists.edumeet.org
-* Subscribe: lists.edumeet.org/sympa/subscribe/community/
-* Open archive: lists.edumeet.org/sympa/arc/community/
-
-## Authors
-
-* Håvar Aambø Fosstveit
-* Stefan Otto
-* Mészáros Mihály
-
-
-This started as a fork of the [work](https://github.com/versatica/mediasoup-demo) done by:
-* Iñaki Baz Castillo [[website](https://inakibaz.me)|[github](https://github.com/ibc/)]
-
-
-## License
-
-MIT
-
-
-Contributions to this work were made on behalf of the GÉANT project, a project that has received funding from the European Union’s Horizon 2020 research and innovation programme under Grant Agreement No. 731122 (GN4-2). On behalf of GÉANT project, GÉANT Association is the sole owner of the copyright in all material which was developed by a member of the GÉANT project.
-
-GÉANT Vereniging (Association) is registered with the Chamber of Commerce in Amsterdam with registration number 40535155 and operates in the UK as a branch of GÉANT Vereniging. Registered office: Hoekenrode 3, 1102BR Amsterdam, The Netherlands. UK branch address: City House, 126-130 Hills Road, Cambridge CB2 1PQ, UK.
-# voice-techbridgers
