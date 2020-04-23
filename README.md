@@ -1,4 +1,4 @@
-# multiparty-meeting
+# voice-techbridgers
 
 A WebRTC meeting service using [mediasoup](https://mediasoup.org).
 
